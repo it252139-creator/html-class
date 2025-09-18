@@ -7,6 +7,12 @@ body {
     letter-spacing: 0;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
 .inner {
     width: 86.5%;
     max-width: 960px;
@@ -75,4 +81,80 @@ header h1 {
     width: 80px;
     margin: 20px auto 0;
     border-top: solid 1px #1E1E1E;
+}
+
+.posts .discussion {
+    display: grid;
+    row-gap: 50px;
+}
+
+.discussion article:first-child {
+    border-bottom: solid 1px #DDDDDD;
+    padding-bottom: 50px;
+}
+
+.new {
+    position: relative;
+}
+
+.new::before {
+    padding: 6px 10px;
+    content: "NEW";
+    display: inline-block;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1;
+}
+
+.posts p {
+    margin: 20px 0;
+}
+
+.posts li {
+    padding: 6px 12px;
+    margin-right: 10px;
+    font-size: 12px;
+    display: inline-block;
+    background-color: #F5F5F5;
+}
+
+footer {
+    margin-top: 100px;
+    padding: 100px 0;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+footer dl {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+footer dl div {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    column-gap: 50px;
+    padding: 20px;
+    border-bottom: solid 1px #FFFFFF;
+}
+
+.copy {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (min-width:640px) {
+    .posts .discussion {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 60px;
+    }
+
+    .discussion article:first-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
 }
