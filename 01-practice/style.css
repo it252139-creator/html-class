@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+body {
+    font-size: 14px;
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    line-height: 2;
+    letter-spacing: 0;
+}
+
+.inner {
+    width: 86.5%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 40px 0;
+    line-height: 1;
+}
+
+.mainvisual {
+    background: url(./images/bg_main.png) no-repeat center center;
+    background-size: cover;
+    padding: 240px 0 80px;
+}
+
+.mainvisual dl {
+    width: 343px;
+    padding: 40px 40px;
+    background-color: #FFFFFF;
+}
+
+.mainvisual dl dt {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+}
+
+.mainvisual dl dd {
+    margin-top: 30px;
+    font-size: 36px;
+    line-height: 1.38;
+}
+
+
+.posts h3 {
+    margin-top: 155px;
+    margin-bottom: 70px;
+    font-size: 36px;
+    line-height: 1.19;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.posts h3::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    background-color: #72C9F3;
+    border-radius: 50%;
+}
+
+.posts h3::after {
+    content: "";
+    display: block;
+    width: 80px;
+    margin: 20px auto 0;
+    border-top: solid 1px #1E1E1E;
+}
