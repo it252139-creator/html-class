@@ -214,9 +214,6 @@ img {
 .customer__name {
   line-height: 1.7142857143;
 }
-.customer__text {
-  line-height: 2;
-}
 .customer__name dt {
   font-weight: bold;
 }
