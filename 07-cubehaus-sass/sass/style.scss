@@ -1,0 +1,242 @@
+@use "sass:math";
+
+$bs: (
+    "desktop": 640px,
+);
+
+$color-text: #000000;
+$color-main: #E40065;
+$color-bg: #2F2F2F;
+
+$font-famly-base: "游ゴシック", "Yu Gothic", Helvetica, Arial, sans-serif;
+
+@mixin mq($b: desktop) {
+    @media (#{map-get($bs, $b)} <=width) {
+        @content;
+    }
+}
+
+@mixin inner($mw: 1000px, $w: percentage(math.div(560, 640))) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@mixin title-main($t) {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 60px;
+
+    &::before {
+        content: $t;
+        display: block;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: $color-main solid 2px;
+    }
+}
+
+body {
+    color: $color-text;
+    font-size: 14px;
+    line-height: math.div(34, 14);
+    letter-spacing: #{math.div(50,1000)}em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* header */
+.header {
+    padding: 40px 0;
+    text-align: center;
+
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+.gnav {
+    align-self: center;
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 30px;
+        font-size: 12px;
+    }
+
+    &__active {
+        color: $color-main;
+    }
+}
+
+
+/* philosophy */
+.philosophy {
+    &__title {
+        @include title-main("PHILOSOPHY");
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__text {
+        max-width: 780px;
+        margin: auto;
+        display: grid;
+        row-gap: 60px;
+        text-align: center;
+    }
+
+    &__text p {
+        word-break: keep-all;
+    }
+}
+
+/* works */
+.works {
+    &__title {
+        @include title-main("WORKS");
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        display: grid;
+        row-gap: 60px;
+
+        @include mq() {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 80px;
+        }
+    }
+}
+
+.card {
+    &__catch {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: math.div(30, 18);
+        margin: 30px 0 20px 0;
+    }
+
+    &__pic {
+        position: relative;
+    }
+
+    &__pic--new::before {
+        content: "NEW";
+        display: inline-block;
+        position: absolute;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 20px;
+        left: 15px;
+        bottom: 15px;
+        padding: 0 15px;
+        background-color: $color-main;
+        color: #FFFFFF;
+    }
+}
+
+/* voice */
+.voice {
+    background-color: #F4F4F4;
+    margin-top: 120px;
+    padding-bottom: 120px;
+
+    &__title {
+        @include title-main("VOICE");
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        display: grid;
+        row-gap: 60px;
+
+        @include mq() {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 80px;
+        }
+    }
+}
+
+/* customer */
+.customer {
+    display: grid;
+    padding: 45px 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: #a3a3a3 solid 1px;
+
+
+    &__profile {
+        display: grid;
+        justify-self: start;
+        grid-auto-flow: column;
+        align-items: center;
+        align-self: end;
+        column-gap: 20px;
+    }
+
+    &__name {
+        line-height: math.div(24, 14);
+    }
+
+    &__text {
+        line-height: 2;
+    }
+
+    &__name dt {
+        font-weight: bold;
+    }
+
+}
+
+/* footer */
+.footer {
+    padding: 80px 0;
+    background-color: $color-bg;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: math.div(20, 12);
+    ;
+
+    &__inner {
+        @include inner();
+    }
+}
