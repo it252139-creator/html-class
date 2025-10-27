@@ -96,6 +96,13 @@ img {
     }
 }
 
+/* mainvisual */
+.mainvisual {
+    &__inner {
+        @include inner();
+    }
+}
+
 
 /* philosophy */
 .philosophy {

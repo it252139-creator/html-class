@@ -25,6 +25,11 @@
     <main class="main">
         <section class="mainvisual">
             <div class="mainvisual__inner">
+                <picture class="mainvisual__pic">
+                    <source media="(width >= 640px)" srcset="./images/pic_main_lg.png">
+                    <source media="(width < 640px)" srcset="./images/pic_main_sm.png">
+                    <img src="./images/pic_main_lg.png" alt="">
+                </picture>
             </div>
         </section>
         <section class="philosophy">
