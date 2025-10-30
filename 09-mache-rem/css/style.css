@@ -1,0 +1,137 @@
+body {
+  color: #5A5A5A;
+  font-size: 0.875rem;
+  font-family: Verdana, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.7142857143;
+  letter-spacing: 0.025em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 2.5rem 0;
+  background-color: rgba(43, 43, 43, 0.8);
+  color: #fff;
+}
+.header__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.gnav__list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  -moz-column-gap: 1.875rem;
+       column-gap: 1.875rem;
+}
+.gnav__item {
+  font-weight: bold;
+}
+.gnav__active {
+  color: #ED145B;
+}
+
+.footer {
+  padding: 2.5rem 0 8.75rem;
+  background-color: #2B2B2B;
+  color: #fff;
+}
+.footer__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3.125rem;
+  color: #fff;
+  background-color: #ED145B;
+  font-weight: bold;
+}
+.btn--read {
+  background-color: #EDAA14;
+}
+
+.mainvisual {
+  padding: 15rem 0 8.75rem;
+  background: url(../images/bg_mainvisual.png) no-repeat center/cover;
+}
+@media (width >= 640px) {
+  .mainvisual {
+    text-align: center;
+  }
+}
+.mainvisual__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainvisual__title {
+  font-size: 2.875rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.1956521739;
+}
+.mainvisual__active {
+  color: #ED145B;
+}
+.mainvisual__text {
+  margin: 2.5rem 0;
+  color: #fff;
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.updates {
+  margin: 7.5rem 0;
+}
+.updates__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.updates__title {
+  font-size: 2rem;
+  color: #2B2B2B;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.updates__list {
+  display: grid;
+  row-gap: 3.75rem;
+}
+@media (width >= 640px) {
+  .updates__list {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 3.75rem;
+         column-gap: 3.75rem;
+  }
+}
+
+.card__title {
+  padding: 1.5rem 0 0.875rem;
+  border-bottom: 1px solid #5A5A5A;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card__text {
+  margin: 0.875rem 0 3rem;
+}
+/*# sourceMappingURL=style.css.map */
